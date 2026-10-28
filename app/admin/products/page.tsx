@@ -418,7 +418,7 @@ function ProductsTable() {
 
                           {/* Price */}
                           <td className="p-4 text-slate-900 font-bold">
-                            {p.unit_price ? `$${Number(p.unit_price).toFixed(2)}` : '$0.00'}
+                            {p.unit_price ? `₹${Number(p.unit_price).toFixed(2)}` : '₹0.00'}
                           </td>
 
                           {/* Stock Left & Stepper Controls */}

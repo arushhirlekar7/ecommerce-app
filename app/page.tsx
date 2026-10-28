@@ -699,7 +699,7 @@ export default function Home() {
                       <div>
                         <span className="text-xs text-slate-400 font-medium">Price</span>
                         <p className="text-2xl font-black text-slate-900 tracking-tight">
-                          ${product.unit_price.toFixed(2)}
+                          ₹{product.unit_price.toFixed(2)}
                         </p>
                       </div>
 
@@ -815,7 +815,7 @@ export default function Home() {
                           </button>
                         </div>
                         <div className="text-xs text-slate-500 mt-0.5">
-                          ${item.unit_price.toFixed(2)} each &bull; <span className="font-semibold text-slate-700">{item.stock} left in stock</span>
+                          ₹{item.unit_price.toFixed(2)} each &bull; <span className="font-semibold text-slate-700">{item.stock} left in stock</span>
                         </div>
 
                         {/* Quantity Stepper & Subtotal */}
@@ -842,7 +842,7 @@ export default function Home() {
                           </div>
 
                           <div className="text-sm font-black text-slate-900">
-                            ${(item.unit_price * item.cartQuantity).toFixed(2)}
+                            ₹{(item.unit_price * item.cartQuantity).toFixed(2)}
                           </div>
                         </div>
 
@@ -864,7 +864,7 @@ export default function Home() {
                   <div className="space-y-2 mb-4 text-sm">
                     <div className="flex justify-between text-slate-500 text-xs">
                       <span>Items Subtotal ({totalCartItems})</span>
-                      <span className="font-semibold text-slate-800">${cartSubtotal.toFixed(2)}</span>
+                      <span className="font-semibold text-slate-800">₹{cartSubtotal.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between text-slate-500 text-xs">
                       <span>Instant Flash Shipping</span>
@@ -872,7 +872,7 @@ export default function Home() {
                     </div>
                     <div className="border-t border-slate-200 pt-2 flex justify-between text-base font-black text-slate-900">
                       <span>Total Amount</span>
-                      <span className="text-blue-600 text-xl">${cartSubtotal.toFixed(2)}</span>
+                      <span className="text-blue-600 text-xl">₹{cartSubtotal.toFixed(2)}</span>
                     </div>
                   </div>
 
@@ -934,7 +934,7 @@ export default function Home() {
                   {pendingCheckoutItem ? pendingCheckoutItem.product_name : cart.map(c => c.product_name).join(', ')}
                 </span>
                 <span className="font-black text-slate-900 text-sm">
-                  ${pendingCheckoutItem ? pendingCheckoutItem.unit_price.toFixed(2) : cartSubtotal.toFixed(2)}
+                  ₹{pendingCheckoutItem ? pendingCheckoutItem.unit_price.toFixed(2) : cartSubtotal.toFixed(2)}
                 </span>
               </div>
             </div>
@@ -1060,8 +1060,8 @@ export default function Home() {
                     <tr key={idx} className="hover:bg-slate-50/50">
                       <td className="p-3 font-semibold text-slate-900">{item.product_name}</td>
                       <td className="p-3 text-center font-bold text-slate-700">{item.quantity}</td>
-                      <td className="p-3 text-right text-slate-600">${item.unit_price.toFixed(2)}</td>
-                      <td className="p-3 text-right font-bold text-slate-900">${item.subtotal.toFixed(2)}</td>
+                      <td className="p-3 text-right text-slate-600">₹{item.unit_price.toFixed(2)}</td>
+                      <td className="p-3 text-right font-bold text-slate-900">₹{item.subtotal.toFixed(2)}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -1072,7 +1072,7 @@ export default function Home() {
             <div className="space-y-1.5 text-xs border-t border-slate-200 pt-4 mb-5">
               <div className="flex justify-between text-slate-600">
                 <span>Items Subtotal:</span>
-                <span className="font-semibold text-slate-800">${receiptData.totalAmount.toFixed(2)}</span>
+                <span className="font-semibold text-slate-800">₹{receiptData.totalAmount.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-slate-600">
                 <span>Shipping & Fulfillment:</span>
@@ -1084,7 +1084,7 @@ export default function Home() {
               </div>
               <div className="border-t border-slate-200 pt-2 flex justify-between text-base font-black text-slate-900">
                 <span>Grand Total Paid:</span>
-                <span className="text-blue-600 text-lg">${receiptData.totalAmount.toFixed(2)}</span>
+                <span className="text-blue-600 text-lg">₹{receiptData.totalAmount.toFixed(2)}</span>
               </div>
             </div>
 

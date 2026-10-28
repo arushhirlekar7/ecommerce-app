@@ -1,0 +1,649 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' 
+xmlns:w='urn:schemas-microsoft-com:office:word' 
+xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>FlashCart System Documentation</title>
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+  @page {
+    size: 8.5in 11.0in;
+    margin: 0.65in 0.75in 0.65in 0.75in;
+    mso-header-margin: 0.4in;
+    mso-footer-margin: 0.4in;
+    mso-paper-source: 0;
+  }
+  body {
+    font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #1e293b;
+    background-color: #ffffff;
+  }
+  h1, h2, h3, h4 {
+    color: #0f172a;
+    font-family: 'Segoe UI Semibold', 'Segoe UI', Calibri, sans-serif;
+    page-break-after: avoid;
+  }
+  h1 {
+    font-size: 21pt;
+    color: #1d4ed8;
+    border-bottom: 2pt solid #2563eb;
+    padding-bottom: 4px;
+    margin-top: 20pt;
+    margin-bottom: 10pt;
+  }
+  h2 {
+    font-size: 15pt;
+    color: #1e40af;
+    border-bottom: 1pt solid #cbd5e1;
+    padding-bottom: 3px;
+    margin-top: 16pt;
+    margin-bottom: 8pt;
+  }
+  h3 {
+    font-size: 12pt;
+    color: #334155;
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+  }
+  p, li {
+    font-size: 10.5pt;
+    margin-bottom: 5pt;
+  }
+  .cover-page {
+    text-align: center;
+    page-break-after: always;
+    padding-top: 60pt;
+    padding-bottom: 60pt;
+  }
+  .cover-title {
+    font-size: 32pt;
+    font-weight: 900;
+    color: #1e3a8a;
+    margin-bottom: 10pt;
+    line-height: 1.2;
+  }
+  .cover-subtitle {
+    font-size: 15pt;
+    color: #475569;
+    margin-bottom: 30pt;
+  }
+  .cover-badge {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 5pt 14pt;
+    border-radius: 20pt;
+    font-weight: bold;
+    font-size: 11pt;
+    margin-bottom: 40pt;
+  }
+  .cover-meta {
+    font-size: 11pt;
+    color: #334155;
+    margin-top: 70pt;
+    line-height: 1.7;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8pt;
+    margin-bottom: 12pt;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+  }
+  th {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+    padding: 7pt 9pt;
+    border: 1pt solid #0f172a;
+  }
+  td {
+    padding: 6pt 9pt;
+    border: 1pt solid #cbd5e1;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background-color: #f8fafc;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 9pt;
+    background-color: #f1f5f9;
+    padding: 1.5pt 3.5pt;
+    border-radius: 3pt;
+    color: #0369a1;
+  }
+  pre {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 10pt;
+    border-radius: 5pt;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 9pt;
+    line-height: 1.4;
+    overflow-x: auto;
+    page-break-inside: avoid;
+    margin-top: 6pt;
+    margin-bottom: 10pt;
+  }
+  .callout {
+    background-color: #eff6ff;
+    border-left: 3.5pt solid #3b82f6;
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    border-radius: 0 5pt 5pt 0;
+  }
+  .callout-title {
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 3pt;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2pt 5pt;
+    font-size: 8pt;
+    font-weight: bold;
+    border-radius: 3pt;
+  }
+  .badge-red { background-color: #fee2e2; color: #991b1b; }
+  .badge-amber { background-color: #fef3c7; color: #92400e; }
+  .badge-green { background-color: #dcfce7; color: #166534; }
+  .badge-blue { background-color: #dbeafe; color: #1e40af; }
+
+  /* Screenshot Placeholder Box */
+  .screenshot-box {
+    border: 2pt dashed #94a3b8;
+    background-color: #f8fafc;
+    border-radius: 6pt;
+    padding: 35pt 15pt;
+    text-align: center;
+    margin: 12pt 0 4pt 0;
+    page-break-inside: avoid;
+  }
+  .screenshot-icon {
+    font-size: 26pt;
+    color: #64748b;
+    margin-bottom: 4pt;
+  }
+  .screenshot-title {
+    font-weight: bold;
+    font-size: 11pt;
+    color: #1e40af;
+    margin-bottom: 3pt;
+  }
+  .screenshot-hint {
+    font-size: 9pt;
+    color: #64748b;
+    font-style: italic;
+  }
+  .screenshot-caption {
+    text-align: center;
+    font-size: 9pt;
+    font-weight: bold;
+    color: #475569;
+    margin-bottom: 14pt;
+  }
+  .footer-note {
+    text-align: center;
+    font-size: 9pt;
+    color: #64748b;
+    border-top: 1pt solid #e2e8f0;
+    margin-top: 25pt;
+    padding-top: 8pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= COVER PAGE ================= -->
+<div class="cover-page">
+  <div class="cover-badge">PROJECT DOCUMENTATION &amp; SPECIFICATION</div>
+  <div class="cover-title">FlashCart</div>
+  <div class="cover-subtitle">Real-Time High-Speed Flash Sale Storefront &amp; Warehouse Command Center</div>
+  
+  <p style="font-size: 13pt; color: #2563eb; font-weight: bold; margin-top: 25pt;">
+    Educational Project for Sardar Patel Institute of Technology
+  </p>
+  
+  <div class="cover-meta">
+    <strong>Institution:</strong> Sardar Patel Institute of Technology (SPIT), Mumbai<br>
+    <strong>Core Framework:</strong> Next.js 15 (App Router) &bull; React 19 &bull; Tailwind CSS v4<br>
+    <strong>Backend Architecture:</strong> Route Handlers &bull; Cloud Serverless Functions<br>
+    <strong>Date of Documentation:</strong> October 2026<br>
+    <strong>Document Version:</strong> 2.0 (Application &amp; Page Specification Edition)
+  </div>
+</div>
+
+<!-- ================= TABLE OF CONTENTS ================= -->
+<h1>Table of Contents</h1>
+<ol style="line-height: 1.8; font-size: 10.5pt;">
+  <li><strong>Executive Summary &amp; System Overview</strong></li>
+  <li><strong>System Architecture &amp; Technology Stack</strong></li>
+  <li><strong>Frontend Architecture &amp; Complete Page Specifications</strong>
+    <ul>
+      <li>3.1 Customer Storefront &amp; Live Catalog Grid (<code>/</code>)</li>
+      <li>3.2 User-Isolated Shopping Cart &amp; Pincode Prompt (<code>/</code>)</li>
+      <li>3.3 Instant 1-Click Checkout &amp; Printable Receipt (<code>/</code>)</li>
+      <li>3.4 Warehouse Command Center / Admin Dashboard (<code>/admin</code>)</li>
+      <li>3.5 Inventory Database Table with Inline Editors (<code>/admin/products</code>)</li>
+      <li>3.6 Register New Inventory Intake Form (<code>/admin/add-product</code>)</li>
+      <li>3.7 Admin Wizard &amp; Staff Provisioning (<code>/admin/users</code>)</li>
+      <li>3.8 Admin Portal Login &amp; Master Override (<code>/admin/login</code>)</li>
+    </ul>
+  </li>
+  <li><strong>Backend API Route Specifications</strong></li>
+  <li><strong>Key Algorithmic Implementations</strong>
+    <ul>
+      <li>5.1 Strict Flash Sale Oversell Protection Algorithm</li>
+      <li>5.2 Real-time Date-based Expiry Classification</li>
+      <li>5.3 Role-based Access Control (RBAC) &amp; Security Guards</li>
+    </ul>
+  </li>
+  <li><strong>Production Deployment &amp; Continuous Integration Protocol</strong></li>
+  <li><strong>Academic Project Declaration &amp; Attribution</strong></li>
+</ol>
+
+<hr style="border: 0; border-top: 1pt solid #cbd5e1; margin: 20pt 0;">
+
+<!-- ================= 1. EXECUTIVE SUMMARY ================= -->
+<h1>1. Executive Summary &amp; System Overview</h1>
+<p>
+  <strong>FlashCart</strong> is an enterprise-grade, high-concurrency eCommerce web application engineered specifically to solve the classical computational and concurrency bottlenecks encountered during <em>flash sales</em> and high-demand product drops.
+</p>
+<p>
+  During high-traffic flash sale events, traditional eCommerce platforms frequently fail due to <strong>race conditions, inventory overselling, and database deadlocks</strong>. FlashCart incorporates strict atomic stock verification, isolated client-side cart states, and seamless warehouse operations into a unified, responsive platform.
+</p>
+<div class="callout">
+  <div class="callout-title">Core Project Objectives</div>
+  <ul>
+    <li><strong>Zero Oversell Guarantee:</strong> Guarantee that customer order quantities never exceed physically available warehouse stock, regardless of concurrent checkout attempts.</li>
+    <li><strong>End-to-End Inventory Lifecycle Tracking:</strong> Track goods from warehouse intake to manufacturing date, real-time stock levels, and expiration monitoring.</li>
+    <li><strong>Automated Perishable Alerts:</strong> Categorize products into expired (&lt; Today) and upcoming expiration (&le; 7 days) buckets with high-visibility color-coded badges.</li>
+    <li><strong>Role-Based Administrative Security:</strong> Isolate warehouse management tools behind strict role-based access control (RBAC), multi-layered JWT session verification, and administrative provisioning wizards.</li>
+    <li><strong>Seamless Direct Checkout:</strong> Frictionless, 1-click checkout simulation coupled with delivery pincode capture and an automated, printable receipt/tax invoice generator.</li>
+  </ul>
+</div>
+
+<!-- ================= 2. SYSTEM ARCHITECTURE & TECH STACK ================= -->
+<h1>2. System Architecture &amp; Technology Stack</h1>
+<p>
+  The system follows a modern decoupled Cloud Architecture with Next.js App Router providing both the presentation layer (Server &amp; Client Components) and the serverless API micro-services.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Layer / Tier</th>
+      <th>Technology / Tool</th>
+      <th>Key Version</th>
+      <th>Function &amp; Architectural Responsibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Frontend Framework</strong></td>
+      <td>Next.js (App Router)</td>
+      <td>15.x</td>
+      <td>Server-Side Rendering (SSR), Static Generation, React Server Components &amp; Client State.</td>
+    </tr>
+    <tr>
+      <td><strong>UI Library</strong></td>
+      <td>React</td>
+      <td>19.x</td>
+      <td>Declarative component-driven interfaces, reactive state hooks (<code>useState</code>, <code>useEffect</code>).</td>
+    </tr>
+    <tr>
+      <td><strong>Styling &amp; Design</strong></td>
+      <td>Tailwind CSS</td>
+      <td>v4.0</td>
+      <td>Utility-first CSS styling, mobile-first responsive design, modern CSS color palettes.</td>
+    </tr>
+    <tr>
+      <td><strong>Authentication</strong></td>
+      <td>Supabase Auth (GoTrue)</td>
+      <td>v2</td>
+      <td>JWT-based authentication, user metadata management, and encrypted session storage.</td>
+    </tr>
+    <tr>
+      <td><strong>Backend API</strong></td>
+      <td>Next.js Route Handlers</td>
+      <td>15.x</td>
+      <td>Serverless micro-endpoints for atomic stock verification, checkout, and admin tools.</td>
+    </tr>
+    <tr>
+      <td><strong>Deployment &amp; Hosting</strong></td>
+      <td>Vercel Edge Network</td>
+      <td>Production</td>
+      <td>Serverless function runtime, global CDN distribution, continuous integration &amp; deployment (CI/CD).</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ================= 3. COMPLETE PAGE SPECIFICATIONS ================= -->
+<h1>3. Frontend Architecture &amp; Complete Page Specifications</h1>
+<p>
+  FlashCart consists of 6 dedicated application pages and key modal flows. Every page is styled with Tailwind CSS v4, displays dynamic tab headers, and includes the institutional attribution footer.
+</p>
+
+<!-- 3.1 STOREFRONT -->
+<h2>3.1 Customer Storefront &amp; Live Catalog Grid (<code>/</code> &bull; <code>app/page.tsx</code>)</h2>
+<ul>
+  <li><strong>Target User:</strong> Retail shoppers and flash sale buyers.</li>
+  <li><strong>Page Title:</strong> <code>FlashCart | Live Flash Sale Store</code></li>
+  <li><strong>Key Features:</strong>
+    <ul>
+      <li><strong>Flash Sale Hero Banner:</strong> Features live event metrics and countdown branding.</li>
+      <li><strong>Catalog Search &amp; Filter:</strong> Instant dynamic search bar filtering by name or category, with fast category chips (<code>All</code>, <code>Electronics</code>, <code>Food</code>, etc.).</li>
+      <li><strong>Stock Badge System:</strong> High-visibility badges indicating remaining inventory (e.g. <code>50 units left</code> in green, <code>3 units left</code> in bold red alert).</li>
+      <li><strong>Flash Sale Oversell Guard in UI:</strong> Quantity stepper disables incrementing beyond remaining warehouse stock.</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- SCREENSHOT 1 PLACEHOLDER -->
+<div class="screenshot-box">
+  <div class="screenshot-icon">&#128247;</div>
+  <div class="screenshot-title">[ INSERT SCREENSHOT: Customer Storefront &amp; Flash Sale Catalog ]</div>
+  <div class="screenshot-hint">Paste full-width screenshot of the homepage displaying active product cards, search bar, category chips, and live stock badges.</div>
+</div>
+<div class="screenshot-caption">Figure 3.1: FlashCart Customer Storefront with Live Flash Sale Catalog</div>
+
+<!-- 3.2 CART & PINCODE -->
+<h2>3.2 User-Isolated Shopping Cart &amp; Pincode Prompt (<code>/</code> &bull; <code>app/page.tsx</code>)</h2>
+<ul>
+  <li><strong>User-Isolated Cart:</strong> Shopping cart persisted in <code>localStorage</code> scoped to the logged-in user's UID (or guest cart if unauthenticated).</li>
+  <li><strong>Shipping Pincode Prompt Modal:</strong> Before processing orders, users are prompted to enter their postal code. This ensures delivery coordinates are captured and saved directly to the database.</li>
+</ul>
+
+<!-- SCREENSHOT 2 PLACEHOLDER -->
+<div class="screenshot-box">
+  <div class="screenshot-icon">&#128247;</div>
+  <div class="screenshot-title">[ INSERT SCREENSHOT: Shopping Cart Drawer &amp; Shipping Pincode Prompt Modal ]</div>
+  <div class="screenshot-hint">Paste screenshot of the slide-over Cart drawer and the Shipping Pincode prompt modal dialog.</div>
+</div>
+<div class="screenshot-caption">Figure 3.2: Slide-Over Cart Drawer &amp; Shipping Pincode Prompt Modal</div>
+
+<!-- 3.3 CHECKOUT & RECEIPT -->
+<h2>3.3 Instant 1-Click Checkout &amp; Printable Receipt (<code>/</code> &bull; <code>app/page.tsx</code>)</h2>
+<ul>
+  <li><strong>Direct Checkout:</strong> 1-click buy button removes payment gateway friction for high-speed simulation.</li>
+  <li><strong>Printable Official Receipt Modal:</strong> Displays an official tax invoice with receipt ID, purchase breakdown, total cost, and a "Print Receipt" button powered by <code>window.print()</code>.</li>
+</ul>
+
+<!-- SCREENSHOT 3 PLACEHOLDER -->
+<div class="screenshot-box">
+  <div class="screenshot-icon">&#128247;</div>
+  <div class="screenshot-title">[ INSERT SCREENSHOT: Official Printable Order Receipt / Tax Invoice ]</div>
+  <div class="screenshot-hint">Paste screenshot of the Printable Receipt modal showing order breakdown, delivery pincode, and print trigger.</div>
+</div>
+<div class="screenshot-caption">Figure 3.3: Official Printable Order Receipt &amp; Tax Invoice Modal</div>
+
+<!-- 3.4 ADMIN DASHBOARD -->
+<h2>3.4 Warehouse Command Center / Admin Dashboard (<code>/admin</code> &bull; <code>app/admin/page.tsx</code>)</h2>
+<ul>
+  <li><strong>Target User:</strong> Warehouse operations staff, inventory managers, system administrators.</li>
+  <li><strong>Page Title:</strong> <code>Warehouse Command Center | FlashCart Admin</code></li>
+  <li><strong>Security:</strong> Protected by server-side verification endpoint <code>/api/admin/verify</code>. Non-admin users are automatically redirected to <code>/admin/login</code>.</li>
+  <li><strong>Key Features:</strong>
+    <ul>
+      <li><strong>Interactive Metric Card 1 (Active Catalog):</strong> Displays total registered products. Clicking navigates to the full inventory database.</li>
+      <li><strong>Interactive Metric Card 2 (Low Stock Alert):</strong> Displays count of critical inventory items (&lt;10 units). Clicking navigates to filtered table view (<code>?filter=low</code>).</li>
+      <li><strong>Interactive Metric Card 3 (Expiry Alerts):</strong> Displays count of expired items and items expiring in the current 7-day window. Clicking navigates to <code>?filter=expiring</code>.</li>
+      <li><strong>Quick Action Launcher:</strong> Prominent shortcut buttons for <em>+ Add New Product</em> and <em>+ Add Admin Wizard</em>.</li>
+      <li><strong>User Profile Dropdown:</strong> Modern avatar circle showing administrator initials, email address, and a one-click Sign Out action.</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- SCREENSHOT 4 PLACEHOLDER -->
+<div class="screenshot-box">
+  <div class="screenshot-icon">&#128247;</div>
+  <div class="screenshot-title">[ INSERT SCREENSHOT: Warehouse Command Center Dashboard ]</div>
+  <div class="screenshot-hint">Paste screenshot of the Admin Dashboard showing the 3 metric cards, quick action buttons, and admin avatar.</div>
+</div>
+<div class="screenshot-caption">Figure 3.4: Warehouse Command Center Dashboard &amp; Real-Time Metric Cards</div>
+
+<!-- 3.5 INVENTORY DATABASE TABLE -->
+<h2>3.5 Inventory Database Table with Inline Editors (<code>/admin/products</code> &bull; <code>app/admin/products/page.tsx</code>)</h2>
+<ul>
+  <li><strong>Target User:</strong> Inventory controllers and warehouse dispatchers.</li>
+  <li><strong>Page Title:</strong> Dynamic based on active filter (<code>Inventory Database</code> / <code>Low Stock Alerts</code> / <code>Expiry Alerts</code>).</li>
+  <li><strong>Key Features:</strong>
+    <ul>
+      <li><strong>Inline Stock Editor:</strong> Allows updating stock quantities on the fly using <code>[-]</code> and <code>[+]</code> step buttons or by clicking the badge to enter any numeric quantity. Updates are dispatched via <code>/api/admin/update-stock</code>.</li>
+      <li><strong>Inline Expiry Date Editor:</strong> Administrators can modify the expiration date directly in the table using a native HTML5 date picker, persisting changes via <code>/api/admin/update-expiry</code>.</li>
+      <li><strong>Visual Expiry Badges:</strong>
+        <span class="badge badge-red">&#9888; EXPIRED</span> for items past current date;
+        <span class="badge badge-amber">&#9203; Expiring Soon</span> for items expiring within 7 days;
+        <span class="badge badge-green">&#10003; Valid</span> for safe items.
+      </li>
+      <li><strong>Product Deletion:</strong> Trash icon with double-confirmation dialog triggers cascade deletion via <code>/api/admin/products/delete</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- SCREENSHOT 5 PLACEHOLDER -->
+<div class="screenshot-box">
+  <div class="screenshot-icon">&#128247;</div>
+  <div class="screenshot-title">[ INSERT SCREENSHOT: Inventory Database Table with Inline Editors ]</div>
+  <div class="screenshot-hint">Paste screenshot of the inventory table showing stock badges, stepper buttons, inline date pickers, and expiry status alerts.</div>
+</div>
+<div class="screenshot-caption">Figure 3.5: Inventory Database Table with Inline Stock &amp; Expiry Date Editors</div>
+
+<!-- 3.6 REGISTER INVENTORY FORM -->
+<h2>3.6 Register New Inventory Intake Form (<code>/admin/add-product</code> &bull; <code>app/admin/add-product/page.tsx</code>)</h2>
+<ul>
+  <li><strong>Target User:</strong> Warehouse procurement and intake teams.</li>
+  <li><strong>Page Title:</strong> <code>Register New Inventory | FlashCart Admin</code></li>
+  <li><strong>Key Features:</strong>
+    <ul>
+      <li>Captures product metadata (Name, Category, Price) and inventory parameters (Initial Stock, Expiry Date).</li>
+      <li>Automatically timestamps intake with <code>manufacturing_date = CURRENT_DATE</code>.</li>
+      <li>Provides immediate visual feedback upon successful registration.</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- SCREENSHOT 6 PLACEHOLDER -->
+<div class="screenshot-box">
+  <div class="screenshot-icon">&#128247;</div>
+  <div class="screenshot-title">[ INSERT SCREENSHOT: Register New Inventory Intake Form ]</div>
+  <div class="screenshot-hint">Paste screenshot of the Add Product form with input fields for name, category, price, stock, and expiry date.</div>
+</div>
+<div class="screenshot-caption">Figure 3.6: Register New Inventory Intake Form</div>
+
+<!-- 3.7 ADMIN WIZARD -->
+<h2>3.7 Admin Wizard &amp; Staff Provisioning (<code>/admin/users</code> &bull; <code>app/admin/users/page.tsx</code>)</h2>
+<ul>
+  <li><strong>Target User:</strong> Super Administrators provisioning accounts for warehouse team members.</li>
+  <li><strong>Page Title:</strong> <code>Add Admin Wizard | FlashCart Admin</code></li>
+  <li><strong>Key Features:</strong>
+    <ul>
+      <li>Form to register new staff with email, secure password, and privilege tier (<code>admin</code> / <code>user</code>).</li>
+      <li>Directly invokes <code>/api/admin/create-user</code> with auto-confirmed email flag.</li>
+      <li>Syncs permissions to both authentication metadata and customer profiles.</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- SCREENSHOT 7 PLACEHOLDER -->
+<div class="screenshot-box">
+  <div class="screenshot-icon">&#128247;</div>
+  <div class="screenshot-title">[ INSERT SCREENSHOT: Admin Wizard - Staff Provisioning Form ]</div>
+  <div class="screenshot-hint">Paste screenshot of the Add Admin Wizard user creation interface.</div>
+</div>
+<div class="screenshot-caption">Figure 3.7: Admin Wizard &amp; Staff Provisioning Portal</div>
+
+<!-- 3.8 ADMIN LOGIN -->
+<h2>3.8 Admin Portal Login &amp; Master Override (<code>/admin/login</code> &bull; <code>app/admin/login/page.tsx</code>)</h2>
+<ul>
+  <li><strong>Target User:</strong> All administrative personnel.</li>
+  <li><strong>Page Title:</strong> <code>Admin Portal Login | FlashCart</code></li>
+  <li><strong>Key Features:</strong>
+    <ul>
+      <li>Clean authentication portal with email/password validation and automatic redirect protection.</li>
+      <li>Interactive master credential hint banner showing default credentials:
+        <code>admin@flashcart.com</code> / <code>Admin@1234</code>.</li>
+      <li><strong>Developer Override Wizard:</strong> Allows bootstrapping initial access using secret setup key (<code>flashcart-setup-2024</code>) via <code>/api/admin/first-setup</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- SCREENSHOT 8 PLACEHOLDER -->
+<div class="screenshot-box">
+  <div class="screenshot-icon">&#128247;</div>
+  <div class="screenshot-title">[ INSERT SCREENSHOT: Admin Portal Login &amp; Developer Setup Wizard ]</div>
+  <div class="screenshot-hint">Paste screenshot of the Admin Login screen showing the credentials form and master hint box.</div>
+</div>
+<div class="screenshot-caption">Figure 3.8: Admin Portal Login Screen &amp; Master Credentials Hint Banner</div>
+
+<!-- ================= 4. BACKEND API SPECIFICATIONS ================= -->
+<h1>4. Backend API Route Specifications</h1>
+<p>
+  All backend endpoints are built using Next.js Route Handlers (App Router) under <code>app/api/</code>.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Route Endpoint</th>
+      <th>HTTP Method</th>
+      <th>Auth / Guard</th>
+      <th>Description &amp; Business Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>/api/checkout</code></td>
+      <td>POST</td>
+      <td>Customer Session</td>
+      <td>Performs atomic oversell verification against warehouse inventory, saves <code>shipping_pincode</code> to customer profile, decrements physical stock, records orders, and returns receipt payload.</td>
+    </tr>
+    <tr>
+      <td><code>/api/admin/verify</code></td>
+      <td>GET</td>
+      <td>Bearer JWT</td>
+      <td>Validates Supabase auth token using Service Role, inspects user metadata and customer role, and returns <code>{ isAdmin: true/false }</code>.</td>
+    </tr>
+    <tr>
+      <td><code>/api/admin/update-stock</code></td>
+      <td>POST</td>
+      <td>Admin Guard</td>
+      <td>Updates physical <code>stock_quantity</code> in the warehouse inventory. Automatically updates status to <code>OUT_OF_STOCK</code> if quantity equals zero.</td>
+    </tr>
+    <tr>
+      <td><code>/api/admin/update-expiry</code></td>
+      <td>POST</td>
+      <td>Admin Guard</td>
+      <td>Modifies the <code>expiry_date</code> column of a specific inventory batch.</td>
+    </tr>
+    <tr>
+      <td><code>/api/admin/products/delete</code></td>
+      <td>POST</td>
+      <td>Admin Guard</td>
+      <td>Performs cascade deletion: removes inventory records and order item associations before deleting the master product row.</td>
+    </tr>
+    <tr>
+      <td><code>/api/admin/create-user</code></td>
+      <td>POST</td>
+      <td>Admin Guard</td>
+      <td>Creates a new staff user via Supabase Auth Admin API with pre-verified email and provisions the <code>admin</code> role.</td>
+    </tr>
+    <tr>
+      <td><code>/api/admin/first-setup</code></td>
+      <td>POST</td>
+      <td>Setup Key Override</td>
+      <td>Bootstrapping route that force-grants administrative privileges to an account using <code>ADMIN_SETUP_KEY</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ================= 5. KEY ALGORITHMIC MECHANISMS ================= -->
+<h1>5. Key Algorithmic Mechanisms</h1>
+
+<h3>5.1 Strict Flash Sale Oversell Protection</h3>
+<p>
+  During flash sales, hundreds of shoppers may attempt to purchase scarce inventory at the exact same second. FlashCart enforces a two-tier protection mechanism:
+</p>
+<ol>
+  <li><strong>Client-Side Guard:</strong> The shopping cart blocks users from incrementing the requested quantity past the latest fetched stock level.</li>
+  <li><strong>Server-Side Atomic Guard:</strong> In <code>/api/checkout/route.js</code>, the server queries the database immediately inside the checkout transaction:
+    <pre><code>if (requested &gt; availableStock) {
+    return NextResponse.json({
+        success: false,
+        message: 'Flash Sale Oversell Protection: Only ' + availableStock + ' units remaining!'
+    }, { status: 409 });
+}</code></pre>
+    If valid, the server executes an atomic stock decrement:
+    <pre><code>newStock = Math.max(0, availableStock - requested);
+UPDATE inventory SET stock_quantity = newStock WHERE product_id = ...;</code></pre>
+  </li>
+</ol>
+
+<h3>5.2 Date-Based Expiry Classification</h3>
+<p>
+  Inventory freshness is computed dynamically in JavaScript without requiring recurring background cron jobs:
+</p>
+<ul>
+  <li><strong>Expired Condition:</strong> <code>item.expiry_date &lt; CURRENT_DATE</code> (Flagged in bold red alert).</li>
+  <li><strong>Expiring This Week Condition:</strong> <code>item.expiry_date &gt;= CURRENT_DATE &amp;&amp; item.expiry_date &le; CURRENT_DATE + 7 days</code> (Flagged in amber warning).</li>
+  <li><strong>Fresh Condition:</strong> <code>item.expiry_date &gt; CURRENT_DATE + 7 days</code> (Flagged in green).</li>
+</ul>
+
+<!-- ================= 6. DEPLOYMENT & MAINTENANCE ================= -->
+<h1>6. Production Deployment &amp; Continuous Integration Protocol</h1>
+
+<h3>6.1 Production Deployment on Vercel</h3>
+<p>
+  The project is deployed on Vercel's global edge network. Deployment is connected to GitHub for automated Continuous Integration and Continuous Deployment (CI/CD).
+</p>
+<ol>
+  <li>Create a GitHub repository and push the <code>main</code> branch.</li>
+  <li>Import the repository into <a href="https://vercel.com">Vercel</a>.</li>
+  <li>Configure Production Environment Variables:
+    <ul>
+      <li><code>NEXT_PUBLIC_SUPABASE_URL</code></li>
+      <li><code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code></li>
+      <li><code>SUPABASE_SERVICE_ROLE_KEY</code></li>
+      <li><code>DATABASE_URL</code></li>
+      <li><code>ADMIN_SETUP_KEY</code></li>
+    </ul>
+  </li>
+  <li>Click <strong>Deploy</strong>. Vercel automatically compiles the Next.js bundle and publishes the site live.</li>
+</ol>
+
+<h3>6.2 Making Live Updates in the Future</h3>
+<div class="callout">
+  <div class="callout-title">Standard 3-Step Continuous Deployment Cycle</div>
+  <p>Once deployed on Vercel, any code change made locally is automatically tested, built, and pushed to the live website by running:</p>
+  <pre><code>git add .
+git commit -m "Description of changes made"
+git push origin main</code></pre>
+  <p>Vercel detects the push on branch <code>main</code> and redeploys the live application in ~60 seconds with zero downtime.</p>
+</div>
+
+<!-- ================= 7. CONCLUSION & DECLARATION ================= -->
+<h1>7. Academic Project Declaration &amp; Attribution</h1>
+<p>
+  FlashCart fulfills all architectural and functional objectives for an enterprise-ready, high-speed flash sale and inventory control platform. Through its combination of Next.js 15 App Router, modular serverless micro-endpoints, and strict oversell prevention algorithms, it demonstrates a scalable, resilient design capable of handling extreme eCommerce traffic spikes.
+</p>
+
+<div class="footer-note">
+  <strong>Educational project for Sardar Patel Institute of Technology</strong><br>
+  Developed with Next.js 15, React 19 &amp; Tailwind CSS &bull; Academic Year 2026
+</div>
+
+</body>
+</html>

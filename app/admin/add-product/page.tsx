@@ -90,7 +90,7 @@ export default function AddProductPage() {
                 <input required value={productForm.category} onChange={e => setProductForm({...productForm, category: e.target.value})} className="w-full border p-3 rounded-xl outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. Dairy, Electronics" />
               </div>
               <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Price ($)</label>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Price (₹)</label>
                 <input required type="number" step="0.01" min="0" value={productForm.price} onChange={e => setProductForm({...productForm, price: e.target.value})} className="w-full border p-3 rounded-xl outline-none focus:ring-2 focus:ring-blue-500" placeholder="0.00" />
               </div>
               <div>
